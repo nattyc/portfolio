@@ -1,10 +1,11 @@
 {
-    "name" : "SampleGrunt",
-    "version" : "0.1.0",
-    "author" : "Natty Coleman",
-    "private" : true,
-
-    "devDependencies" : {
-        "grunt" :                   "~0.4.0"
-    }
+  "name": "Portfolio-onepage-simple",
+  "version": "0.1.0",
+  "author": "Natty Coleman",
+  "private": true,
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-imagemin": "~0.5.0",
+    "grunt-cli": "~0.1.13"
+  }
 }

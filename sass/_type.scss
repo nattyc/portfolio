@@ -1,0 +1,102 @@
+@include font-face(AvenirLTStd-Light, '../fonts/AvenirLTStd-Light');
+@include font-face(AvenirLTStd-Medium, '../fonts/AvenirLTStd-Medium',normal);
+@include font-face(AvenirLTStd-MediumOblique, '../fonts/AvenirLTStd-MediumOblique',normal, italic);
+@include font-face(AvenirLTStd-Heavy, '../fonts/AvenirLTStd-Heavy',bold);
+
+
+//font stack variables
+$header-font-stack: 'AvenirLTStd-Heavy', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$light-header-font-stack: 'AvenirLTStd-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$paragraph-font-stack: 'AvenirLTStd-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$italic-font-stack: 'AvenirLTStd-MediumOblique', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+//modular type calculations
+$type-ratio: 1.25; // major third
+$pwr-2: $type-ratio * $type-ratio;
+$pwr-3: $type-ratio * $type-ratio * $type-ratio;
+$pwr-4: $type-ratio * $type-ratio * $type-ratio * $type-ratio;
+$type-base: 1rem; // 16px
+$type-base-px: 16px;
+$line-height-base: $type-ratio;
+$type-margin-bottom: $type-base * $pwr-2;
+
+//mixins for type scale
+@mixin type($level) {
+  @if $level == 7 { // 1rem | 16px
+    font-size: $type-base-px;
+    font-size: $type-base;
+  }
+  @if $level == 6 { // 1.25rem | 20px
+    font-size: $type-base-px * $type-ratio;
+    font-size: $type-base * $type-ratio;
+  }
+  @if $level == 5 { // 25px | 1.5625rem
+    font-size: ($type-base-px * $pwr-2);
+    font-size: ($type-base * $pwr-2);
+  }
+  @if $level == 4 { // 31.25px | 1.95313rem
+    font-size: ($type-base-px * $pwr-3);
+    font-size: ($type-base * $pwr-3);
+  }
+  @if $level == 3 { // 39.0625px | 2.44141rem
+    font-size: ($type-base-px * $pwr-4);
+    font-size: ($type-base * $pwr-4);
+  }
+  @if $level == 2 { // 48.82813px | 3.05176rem
+    font-size: ($type-base-px * $pwr-2 * $pwr-3);
+    font-size: ($type-base * $pwr-2 * $pwr-3);
+  }
+  @if $level == 1 { // 61.03516px | 3.8147rem
+    font-size: ($type-base-px * $pwr-3 * $pwr-3);
+    font-size: ($type-base * $pwr-3 * $pwr-3);
+  }
+}
+
+//link state mixins
+@mixin link-static{ //start position for underline
+border-top: 2px solid rgba(255, 255, 255, 0);
+padding: 0 0 5px;
+transition: .25s;
+}
+
+@mixin link-hover($move-time: .5s, $end-stop: -10px){
+border-top: 2px solid rgba(255, 255, 255, 0);
+padding: 0 0 $end-stop;
+transition: $move-time;
+}
+
+//global type styles
+h1{
+  @include type(1);
+  font-family: $light-header-font-stack;
+  letter-spacing: -.1rem;
+}
+
+p{
+  @include type(7);
+  font-family: $paragraph-font-stack;
+}
+
+
+a{
+  text-decoration: none;
+  color: #fff;
+  @include link-static;
+    &:hover{
+    color: #fff;
+    @include link-hover (.75s, -12px);
+    }
+}
+
+span{
+  color: grey;
+  font-family: $light-header-font-stack;
+  font-size: .75rem;
+  border: 1px solid grey;
+  padding: .5rem .5rem .4rem .5rem;
+  @include border-top-radius(5px);
+  @include border-bottom-radius(5px);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+  text-transform: uppercase;
+}
