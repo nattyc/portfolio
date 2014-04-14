@@ -1,6 +1,6 @@
 $mobile: new-breakpoint(max-width 480px 4);
-$tablet: new-breakpoint(max-width 768px 8);
-$desktop: new-breakpoint(min-width 1000px 12);
+$tablet: new-breakpoint(max-width 800px 8);
+$desktop: new-breakpoint(min-width 801px 12);
 
 
 //Positioning Mixins
@@ -25,10 +25,20 @@ $desktop: new-breakpoint(min-width 1000px 12);
   background-repeat: no-repeat;
 }
 
+@mixin font-feature-settings($settings...) {
+  @if length($settings) == 0 { $settings: none; }
+  @include prefixer(font-feature-settings, $settings, webkit moz ms spec);
+}
+
 
 //Global layout styles
-body{
+
+*{
+  @include font-feature-settings("kern");
+}
+html, body{
   width: 100%;
+  height: 100%;
 }
 
 img{
@@ -40,37 +50,56 @@ img{
 }
 
 //Navigation layout
-header{
-  .header-block{
-    position: absolute;
-    padding-top: 6.75em;
-    @include outer-container;
-    z-index: 999;
-  }
-  background-color: transparent;
-  width: 100%;
+// header{
+//   .header-block{
+//     position: absolute;
+//     padding-top: 6.75em;
+//     @include outer-container;
+//     z-index: 999;
+//   }
+//   background-color: transparent;
+//   width: 100%;
+//   height: 100%;
+//   a{
+//     margin: 0 1.5em;
+//     @include media($mobile) {
+//         display:block;
+//         }
+//   }
+//   nav{
+//     @include vertical-align;
+//     @include span-columns(12);
+
+//   }
+// }
+
+////////////////////////////////
+//HEADER
+////////////////////////////////
+
+//background image
+.background{
+  @include background-image(url("../img/header-bg.jpg"));
+  @include big-bg;
+  position: fixed;
   height: 100%;
-  a{
-    margin: 0 1.5em;
-    @include media($mobile) {
-        display:block;
-        }
-  }
-  nav{
-    @include vertical-align;
-    @include span-columns(12);
+  width: 100%;
+  z-index: -1;
 
   }
-
-}
 
 //Deals with positioning on top intro image
 
 .page-head{
-  //ACTUAL CONTENT
-  @include background-image(url("../img/header-shot.jpg"));
-  @include big-bg;
-  height: 100vh;
+  @include background-image(url("../img/header-shot.png"));
+  margin-left: -2em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative;
+  height: 100%;
+  z-index: 999;
+
   .content-block-center{
     width: 100%;
     text-align: left;
@@ -78,15 +107,15 @@ header{
     z-index: 999;
     .header-block{
       content: " ";
-      height: 75vh;
+      height: 80%;
       background-color: transparent;
       @include span-columns(12);
       @include media($mobile) {
         @include span-columns(4);
         @include pad();
       }
-
     }
+
     .content-wrapper{
       padding-top: 2em;
       @include span-columns(10);
@@ -94,23 +123,29 @@ header{
         @include span-columns(3);
         @include omega();
       }
-      h1{
+      .title{
+        margin-left: -9999px;
+        color: black;
         line-height: 1.1em;
         @include media($mobile) {
           @include type(2);
         }
       }
       p{
+        position: absolute;
+        bottom: 2em;
+        left: 2em;
         padding-top: .75rem;
         @include type(4);
-        color: white;
+        color: black;
         z-index: 999;
         font-family: $light-header-font-stack;
         }
         @include media($mobile) {
-          line-height: 1rem;
+          line-height: 1.7rem;
         }
     }
+  }
 
   .arrow{
     margin-bottom: 5em;
@@ -119,18 +154,35 @@ header{
     text-align: right;
     @include span-columns(2);
     // @include shift(2);
+    img{
+      margin: 0 1em;
+    }
+    @include media($desktop) {
+      img{
+        padding-top: .5em;
+        height: 140px;
+      }
+    }
+    @include media($tablet) {
+      img{
+        padding-top: 1.5em;
+        height:auto;
+      }
+    }
     @include media($mobile) {
       @include span-columns(1);
       @include pad();
       @include omega();
       img{
+        padding-top: 3.75em;
         min-width: 100%;
+        height: auto;
       }
     }
   }
-  }
-
 }
+
+
 
 //WORK IMAGE classes
 .full{
@@ -184,9 +236,13 @@ header{
 //XANGO
 //////////////////////////////////////////
 .xango{
-  background-color: #FFF;
+  background-color: transparentize(orange, 0);
+  @include background-image(url("../img/xango-bg.png"));
+  background-repeat: no-repeat;
+  background-size: contain;
   padding-top: 3em;
   padding-bottom: 3em;
+  z-index: 999;
   $default-layout-direction: RTL;
   @include right-wrapper;
   $default-layout-direction: LTR;
@@ -199,15 +255,24 @@ header{
     }
   }
   h1{
-    color: orange;
+    color: #fff;
   }
+  span{
+    color: #fff;
+    border-color: #fff;
+  }
+
 }
+
 
 //////////////////////////////////////////
 //BLACKSMITH
 //////////////////////////////////////////
 .blacksmith{
   background-color: lighten(black,20%);
+  @include background-image(url("../img/china-bg.png"));
+  background-repeat: no-repeat;
+  background-size: contain;
   padding-top: 3em;
   padding-bottom: 3em;
   @include left-wrapper;
@@ -215,13 +280,21 @@ header{
     padding-top: .6em;
     padding-bottom: 2rem;
     h1, h2, p{
-    color: #fff;
+      color: #fff;
     }
     h1{
-    line-height: .95em;
-    padding-bottom: .5rem;
-    letter-spacing: -.2rem;
-    word-wrap: break-word;
+      line-height: .95em;
+      padding-bottom: .5rem;
+      letter-spacing: -.15rem;
+      word-wrap: break-word;
+      @include media($mobile) {
+        letter-spacing: -.295rem;
+        }
     }
+    }
+        span{
+    color: #fff;
+    border-color: #fff;
   }
 }
+
