@@ -772,7 +772,7 @@ html, body {
   height: 100%;
 }
 
-img {
+img, video, object {
   max-width: 100%;
 }
 
@@ -831,7 +831,7 @@ img {
 .page-head .content-block-center .header-block:last-child {
   margin-right: 0;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .page-head .content-block-center .header-block {
     float: left;
     display: block;
@@ -853,7 +853,7 @@ img {
 .page-head .content-block-center .content-wrapper:last-child {
   margin-right: 0;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .page-head .content-block-center .content-wrapper {
     float: left;
     display: block;
@@ -870,7 +870,7 @@ img {
   color: black;
   line-height: 1.1em;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .page-head .content-block-center .content-wrapper .title {
     font-size: 48.82813px;
     font-size: 3.05176rem;
@@ -887,7 +887,7 @@ img {
   z-index: 999;
   font-family: "AvenirLTStd-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .page-head .content-block-center .content-wrapper {
     line-height: 1.7rem;
   }
@@ -920,7 +920,7 @@ img {
     height: auto;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .page-head .arrow {
     float: left;
     display: block;
@@ -971,7 +971,7 @@ img {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .half-left {
     float: left;
     display: block;
@@ -1006,7 +1006,7 @@ img {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .half-right {
     float: left;
     display: block;
@@ -1039,7 +1039,7 @@ img {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .two-third {
     float: left;
     display: block;
@@ -1094,7 +1094,7 @@ img {
     font-size: 3.05176rem;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .xango .right-content-wrapper {
     float: right;
     display: block;
@@ -1111,7 +1111,7 @@ img {
     padding-bottom: 2em;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .xango .right-content-wrapper {
     padding-bottom: 2em;
   }
@@ -1158,7 +1158,7 @@ img {
     font-size: 3.05176rem;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .blacksmith .left-content-wrapper {
     float: left;
     display: block;
@@ -1182,7 +1182,7 @@ img {
   letter-spacing: -.15rem;
   word-wrap: break-word;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 565px) {
   .blacksmith .left-content-wrapper h1 {
     letter-spacing: -.295rem;
   }
