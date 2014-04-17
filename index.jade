@@ -3,26 +3,28 @@ html(lang="en")
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible" content="IE=Edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui")
     title.
-      The Portfolio of Designer Natty Coleman
+      Natty Coleman - Portfolio
     meta(name = "description" content="Natty Coleman is a designer with experience in UX/UI, branding, and print work.")
     meta(name = "viewport" content="width=device-width, initial-scale=1")
     link(rel = "stylesheet" href="css/main.css")
-    script(type="javascript" src="../js/min/main.min.js")
+    script(type="javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+    script(type="javascript" src="../js/vendor/jquery-1.10.2.min.js")
     script(type="javascript" src="../js/min/plugins.min.js")
+    script(type="javascript" src="../js/min/main.min.js")
+
   body
     div(class="background")
     section(class="page-head")
       div(class="content-block-center")
-        div(class="header-block")
-        div(class="content-wrapper")
-          h1(class="title") Natty Coleman
-          p.
-            UX/UI Designer
-        div(class="arrow")
-          a(href="#work")
-            img(src="../img/arrow.png" height="140px" alt="view work")
+      //- div(class="header-block")
+      div(class="content-wrapper")
+        h1(class="title") Natty Coleman
+        p.
+          UX Designer
+        a(href="#work" id="#towork")
+          img(src="../img/arrow.png" width="95px" alt="view work")
 
     section(class="xango" id="work")
       div(class="content-block-center")

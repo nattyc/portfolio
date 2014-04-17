@@ -1,4 +1,5 @@
 $mobile: new-breakpoint(max-width 565px 4);
+$mobile-small: new-breakpoint(max-width 565px 4);
 $tablet: new-breakpoint(max-width 800px 8);
 $desktop: new-breakpoint(min-width 801px 12);
 
@@ -91,97 +92,102 @@ img, video, object{
 //Deals with positioning on top intro image
 
 .page-head{
-  @include background-image(url("../img/header-shot.png"));
-  margin-left: -2em;
+  @include background-image(url("../img/top-bg-circle.svg"));
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: center center;
   position: relative;
   height: 100%;
+  width: 100%;
   z-index: 999;
+  text-align: center;
 
-  .content-block-center{
-    width: 100%;
-    text-align: left;
-    color: #FFF;
-    z-index: 999;
-    .header-block{
-      content: " ";
-      height: 80%;
-      background-color: transparent;
-      @include span-columns(12);
-      @include media($mobile) {
-        @include span-columns(4);
-        @include pad();
-      }
-    }
 
-    .content-wrapper{
-      padding-top: 2em;
-      @include span-columns(10);
-      @include media($mobile) {
-        @include span-columns(3);
-        @include omega();
-      }
-      .title{
-        margin-left: -9999px;
-        color: black;
-        line-height: 1.1em;
-        @include media($mobile) {
-          @include type(2);
-        }
-      }
-      p{
-        position: absolute;
-        bottom: 2em;
-        left: 2em;
-        padding-top: .75rem;
-        @include type(4);
-        color: black;
-        z-index: 999;
-        font-family: $light-header-font-stack;
-        }
-        @include media($mobile) {
-          line-height: 1.7rem;
-        }
-    }
+// &:before{
+//   content: '';
+//   display: inline-block;
+//   height: 37.9%;
+//   vertical-align: middle;
+
+//   @include media($mobile) {
+//     height: 34%;
+//   }
+// }
+
+.content-wrapper{
+  position: absolute;
+  width: 20em;
+  height: 20em;
+  @include vertical-align;
+  top: 58%;
+  margin: 0 auto;
+  // top: calc(50%-10em);
+  // left: calc(50%-10em);
+  // margin-top: calc(50%-15em);
+  // margin-left: calc(50%-15em);
+  @include media($tablet) {
+    top: 52%;
+    width: 13em;
+    height: 13em;
   }
-
-  .arrow{
-    margin-bottom: 5em;
-    height: 100%;
-    padding: 2em 0;
-    text-align: right;
-    @include span-columns(2);
-    // @include shift(2);
-    img{
-      margin: 0 1em;
-    }
-    @include media($desktop) {
-      img{
-        padding-top: .5em;
-        height: 140px;
-      }
-    }
-    @include media($tablet) {
-      img{
-        padding-top: 1.5em;
-        height:auto;
-      }
-    }
-    @include media($mobile) {
-      @include span-columns(1);
-      @include pad();
-      @include omega();
-      img{
-        padding-top: 3.75em;
-        min-width: 100%;
-        height: auto;
-      }
-    }
+  @include media($mobile) {
+    top: 55%;
+    width: 13em;
+    height: 13em;
   }
 }
 
+h1{
+  color: black;
+  line-height: 1.05em;
+  @include media($tablet) {
+    font-size: 2.5em;
+    margin-top: .45em;
+  }
+  @include media($mobile) {
+    @include type(3);
+  }
+}
+
+p{
+  padding-top: 1rem;
+  @include type(4);
+  color: black;
+  z-index: 999;
+  font-family: $light-header-font-stack;
+  @include media($tablet) {
+    padding-top: 2rem;
+    @include type(5);
+  }
+  @include media($mobile) {
+    @include type(5);
+    padding-top: .5rem;
+  }
+}
+
+img{
+  margin-top: -1em;
+  height: 20%;
+  width: 20%;
+  @include transition (all .4s ease-in-out);
+  opacity: .5;
+  @include media($mobile) {
+    height: 20%;
+    width: 20%;
+    margin-top: -1.5em;
+  }
+  &:hover{
+    @include transition (all .4s ease-in-out);
+    margin-top: -.2em;
+    opacity: 1;
+  }
+  @include media($mobile) {
+    height: 20%;
+    width: 20%;
+    margin-top: -.8em;
+  }
+}
+}
 
 
 //WORK IMAGE classes
