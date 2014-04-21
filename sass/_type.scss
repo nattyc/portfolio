@@ -2,6 +2,9 @@
 @include font-face(AvenirLTStd-Medium, '../fonts/AvenirLTStd-Medium',normal);
 @include font-face(AvenirLTStd-MediumOblique, '../fonts/AvenirLTStd-MediumOblique',normal, italic);
 @include font-face(AvenirLTStd-Heavy, '../fonts/AvenirLTStd-Heavy',bold);
+@include font-face(Sentinel-Light, '../fonts/Sentinel-Light',normal);
+@include font-face(Sentinel-LightItalic, '../fonts/Sentinel-LightItalic',normal, italic);
+// @include font-face(Sentinel-MediumItalic, '../fonts/Sentinel-MediumItalic',bold, italic);
 
 
 //font stack variables
@@ -9,6 +12,7 @@ $header-font-stack: 'AvenirLTStd-Heavy', 'Helvetica Neue', Helvetica, Arial, san
 $light-header-font-stack: 'AvenirLTStd-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $paragraph-font-stack: 'AvenirLTStd-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $italic-font-stack: 'AvenirLTStd-MediumOblique', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$formal-header-stack: 'Sentinel-LightItalic', 'Garamond', Times, 'Hoefler Text', 'Times New Roman', serif;
 
 //modular type calculations
 $type-ratio: 1.25; // major third
@@ -68,8 +72,12 @@ transition: $move-time;
 //global type styles
 h1{
   @include type(1);
-  font-family: $light-header-font-stack;
+  font-family: $formal-header-stack;
+  font-variant: normal;
   letter-spacing: -.1rem;
+  line-height: 1em;
+  font-weight: 200;
+  text-transform: uppercase;
 }
 
 p{
@@ -98,5 +106,9 @@ span{
   @include border-bottom-radius(5px);
   @include border-left-radius(5px);
   @include border-right-radius(5px);
+  text-transform: uppercase;
+}
+
+.project-info{
   text-transform: uppercase;
 }
