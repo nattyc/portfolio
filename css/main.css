@@ -1155,7 +1155,14 @@ video,
   margin: .7em 0;
 }
 
-/* line 61, _layout.scss */
+/* line 59, _layout.scss */
+
+.img-trans {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 65, _layout.scss */
 
 .video-container {
   position: relative;
@@ -1165,7 +1172,7 @@ video,
   overflow: hidden;
 }
 
-/* line 69, _layout.scss */
+/* line 73, _layout.scss */
 
 .video-container iframe,
 .video-container object,
@@ -1177,7 +1184,7 @@ video,
   height: 100%;
 }
 
-/* line 109, _layout.scss */
+/* line 113, _layout.scss */
 
 .page-head {
   background-image: url("../img/top-bg-bottom.png"), url("../img/top-bg-middle.png"), url("../img/top-bg-top.png");
@@ -1193,7 +1200,7 @@ video,
   text-align: left;
 }
 
-/* line 122, _layout.scss */
+/* line 126, _layout.scss */
 
 .page-head .content-wrapper {
   *zoom: 1;
@@ -1216,7 +1223,7 @@ video,
   clear: both;
 }
 
-/* line 126, _layout.scss */
+/* line 130, _layout.scss */
 
 .page-head .name {
   text-indent: .07em;
@@ -1236,7 +1243,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 126, _layout.scss */
+  /* line 130, _layout.scss */
 
   .page-head .name {
     font-size: 2.5em;
@@ -1245,7 +1252,7 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 126, _layout.scss */
+  /* line 130, _layout.scss */
 
   .page-head .name {
     font-size: 39.0625px;
@@ -1253,7 +1260,7 @@ video,
   }
 }
 
-/* line 141, _layout.scss */
+/* line 145, _layout.scss */
 
 .page-head .occupation {
   float: left;
@@ -1275,7 +1282,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 141, _layout.scss */
+  /* line 145, _layout.scss */
 
   .page-head .occupation {
     font-size: 25px;
@@ -1283,7 +1290,7 @@ video,
   }
 }
 
-/* line 157, _layout.scss */
+/* line 161, _layout.scss */
 
 .page-head .arrow {
   background-color: white;
@@ -1299,7 +1306,7 @@ video,
   opacity: .2;
 }
 
-/* line 168, _layout.scss */
+/* line 172, _layout.scss */
 
 .page-head .arrow:hover {
   -webkit-transition: all 0.4s ease-in-out;
@@ -1309,7 +1316,7 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 157, _layout.scss */
+  /* line 161, _layout.scss */
 
   .page-head .arrow {
     left: 1.75em;
@@ -1317,7 +1324,7 @@ video,
   }
 }
 
-/* line 182, _layout.scss */
+/* line 186, _layout.scss */
 
 .full {
   float: left;
@@ -1332,7 +1339,7 @@ video,
   margin-right: 0;
 }
 
-/* line 187, _layout.scss */
+/* line 191, _layout.scss */
 
 .half-left {
   float: left;
@@ -1348,7 +1355,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 187, _layout.scss */
+  /* line 191, _layout.scss */
 
   .half-left {
     float: left;
@@ -1365,7 +1372,7 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 187, _layout.scss */
+  /* line 191, _layout.scss */
 
   .half-left {
     float: left;
@@ -1381,7 +1388,7 @@ video,
   }
 }
 
-/* line 198, _layout.scss */
+/* line 202, _layout.scss */
 
 .half-right {
   float: left;
@@ -1398,7 +1405,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 198, _layout.scss */
+  /* line 202, _layout.scss */
 
   .half-right {
     float: left;
@@ -1416,7 +1423,7 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 198, _layout.scss */
+  /* line 202, _layout.scss */
 
   .half-right {
     float: left;
@@ -1432,7 +1439,7 @@ video,
   }
 }
 
-/* line 211, _layout.scss */
+/* line 215, _layout.scss */
 
 .two-third {
   float: left;
@@ -1448,7 +1455,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 211, _layout.scss */
+  /* line 215, _layout.scss */
 
   .two-third {
     float: left;
@@ -1465,7 +1472,7 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 211, _layout.scss */
+  /* line 215, _layout.scss */
 
   .two-third {
     float: left;
@@ -1481,7 +1488,7 @@ video,
   }
 }
 
-/* line 223, _layout.scss */
+/* line 227, _layout.scss */
 
 .project-info {
   font-family: "AvenirLTStd-Heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1489,7 +1496,7 @@ video,
   margin: -.55em 0 .5em;
 }
 
-/* line 234, _layout.scss */
+/* line 238, _layout.scss */
 
 .xango {
   background-color: orange;
@@ -1564,7 +1571,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 258, _layout.scss */
+  /* line 262, _layout.scss */
 
   .xango .right-content-wrapper {
     padding-bottom: 2em;
@@ -1572,28 +1579,28 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 258, _layout.scss */
+  /* line 262, _layout.scss */
 
   .xango .right-content-wrapper {
     padding-bottom: 2em;
   }
 }
 
-/* line 266, _layout.scss */
+/* line 270, _layout.scss */
 
 .xango h1 {
   color: #fff;
   padding-bottom: .75rem;
 }
 
-/* line 270, _layout.scss */
+/* line 274, _layout.scss */
 
 .xango span {
   color: #fff;
   border-color: #fff;
 }
 
-/* line 284, _layout.scss */
+/* line 288, _layout.scss */
 
 .blacksmith {
   background-color: #333333;
@@ -1663,14 +1670,14 @@ video,
   }
 }
 
-/* line 292, _layout.scss */
+/* line 296, _layout.scss */
 
 .blacksmith .left-content-wrapper {
   padding-top: .6em;
   padding-bottom: 2rem;
 }
 
-/* line 295, _layout.scss */
+/* line 299, _layout.scss */
 
 .blacksmith .left-content-wrapper h1,
 .blacksmith .left-content-wrapper h2,
@@ -1678,7 +1685,7 @@ video,
   color: #fff;
 }
 
-/* line 298, _layout.scss */
+/* line 302, _layout.scss */
 
 .blacksmith .left-content-wrapper h1 {
   line-height: .95em;
@@ -1688,27 +1695,27 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 298, _layout.scss */
+  /* line 302, _layout.scss */
 
   .blacksmith .left-content-wrapper h1 {
     letter-spacing: -.295rem;
   }
 }
 
-/* line 308, _layout.scss */
+/* line 312, _layout.scss */
 
 .blacksmith span {
   color: #fff;
   border-color: #fff;
 }
 
-/* line 311, _layout.scss */
+/* line 315, _layout.scss */
 
 .blacksmith span video {
   height: 80%;
 }
 
-/* line 321, _layout.scss */
+/* line 325, _layout.scss */
 
 .spur {
   background-color: rgba(0, 128, 128, 0.8);
@@ -1783,7 +1790,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 341, _layout.scss */
+  /* line 345, _layout.scss */
 
   .spur .right-content-wrapper {
     padding-bottom: 2em;
@@ -1791,14 +1798,14 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 341, _layout.scss */
+  /* line 345, _layout.scss */
 
   .spur .right-content-wrapper {
     padding-bottom: 2em;
   }
 }
 
-/* line 349, _layout.scss */
+/* line 353, _layout.scss */
 
 .spur p,
 .spur h1,
@@ -1807,19 +1814,19 @@ video,
   color: #fff;
 }
 
-/* line 352, _layout.scss */
+/* line 356, _layout.scss */
 
 .spur h1 {
   padding-bottom: .75rem;
 }
 
-/* line 355, _layout.scss */
+/* line 359, _layout.scss */
 
 .spur span {
   border-color: #fff;
 }
 
-/* line 366, _layout.scss */
+/* line 370, _layout.scss */
 
 .sbdc {
   background-color: #9f4635;
@@ -1889,14 +1896,14 @@ video,
   }
 }
 
-/* line 374, _layout.scss */
+/* line 378, _layout.scss */
 
 .sbdc .left-content-wrapper {
   padding-top: .6em;
   padding-bottom: 2rem;
 }
 
-/* line 377, _layout.scss */
+/* line 381, _layout.scss */
 
 .sbdc .left-content-wrapper h1,
 .sbdc .left-content-wrapper h2,
@@ -1904,7 +1911,7 @@ video,
   color: #fff;
 }
 
-/* line 380, _layout.scss */
+/* line 384, _layout.scss */
 
 .sbdc .left-content-wrapper h1 {
   line-height: .95em;
@@ -1914,21 +1921,21 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 380, _layout.scss */
+  /* line 384, _layout.scss */
 
   .sbdc .left-content-wrapper h1 {
     letter-spacing: -.295rem;
   }
 }
 
-/* line 390, _layout.scss */
+/* line 394, _layout.scss */
 
 .sbdc span {
   color: #fff;
   border-color: #fff;
 }
 
-/* line 393, _layout.scss */
+/* line 397, _layout.scss */
 
 .sbdc span video {
   height: 80%;
