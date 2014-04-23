@@ -56,28 +56,33 @@ $type-margin-bottom: $type-base * $pwr-2;
   }
 }
 
-//link state mixins
+///////////link state mixins
+//underline move mixins
 @mixin link-static{ //start position for underline
-border-top: 2px solid rgba(255, 255, 255, 0);
-padding: 0 0 5px;
-transition: .25s;
+  border-top: 2px solid rgba(255, 255, 255, 0);
+  padding: 0 0 5px;
+  transition: .25s;
 }
 
 @mixin link-hover($move-time: .5s, $end-stop: -10px){
-border-top: 2px solid rgba(255, 255, 255, 0);
-padding: 0 0 $end-stop;
-transition: $move-time;
+  border-top: 2px solid rgba(255, 255, 255, 0);
+  padding: 0 0 $end-stop;
+  transition: $move-time;
 }
 
 //global type styles
+
+
 h1{
   @include type(1);
   font-family: $formal-header-stack;
   font-variant: normal;
-  letter-spacing: -.1rem;
+  letter-spacing: -.15rem;
   line-height: 1em;
   font-weight: 200;
   text-transform: uppercase;
+  padding-bottom: .75rem;
+  word-wrap: break-word;
 }
 
 p{
@@ -85,15 +90,9 @@ p{
   font-family: $paragraph-font-stack;
 }
 
-
 a{
   text-decoration: none;
   color: #fff;
-  @include link-static;
-    &:hover{
-    color: #fff;
-    @include link-hover (.75s, -12px);
-    }
 }
 
 span{

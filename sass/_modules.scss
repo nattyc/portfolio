@@ -25,9 +25,22 @@
   //       @include position(absolute, 0px 0px 0px 0px);
   //   }
 
+
+//@TODO make this work
+@mixin section-bg ($path-to-image, $bg-color, $bg-trans) {
+  @include background-image(url($path-to-image));
+  background-color: transparentize($bg-color, $bg-trans);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+
 @mixin right-wrapper{
-    .right-content-wrapper{
-      padding-top: .25rem;
+  $default-layout-direction: RTL;
+  .right-content-wrapper{
+    padding-top: .25rem;
     @include span-columns(6);
     @include omega();
     @include media($tablet) {
@@ -37,23 +50,27 @@
         @include type(2);
       }
     }
+  @include media($tablet) {
+    padding-bottom: 2em;
+  }
     @include media($mobile) {
-      @include span-columns(4);
-      @include pad();
+    @include span-columns(4);
+    @include pad();
+    padding-bottom: 2em;
     }
   }
+  $default-layout-direction: LTR;
 }
 
 @mixin left-wrapper{
     .left-content-wrapper{
       padding-top: .25rem;
       @include span-columns(6);
-
       @include media($tablet) {
         @include span-columns(4);
-        h1{
-        @include type(2);
-      }
+          h1{
+          @include type(2);
+          }
       }
       @include media($mobile) {
         @include span-columns(4);
