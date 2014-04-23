@@ -111,6 +111,7 @@ img, video, .video-container{
 //Deals with positioning on top intro image
 
 .page-head{
+  background-color: #fff;
   @include background-image(url("../img/top-bg-bottom.png"), url('../img/top-bg-middle.png'), url('../img/top-bg-top.png'));
   background-size: contain;
   background-repeat: no-repeat;
@@ -212,6 +213,29 @@ img, video, .video-container{
   }
 }
 
+.quarter{
+  @include span-columns(3);
+  @include media($tablet) {
+    @include span-columns(4);
+    @include omega(2n);
+  }
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+.quarter-end{
+  @include span-columns(3);
+  @include omega();
+  @include media($tablet) {
+    @include span-columns(4);
+    @include omega();
+  }
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
 .two-third{
   @include span-columns(8);
   // padding: .75rem 0;
@@ -228,6 +252,34 @@ img, video, .video-container{
   font-family: $header-font-stack;
   font-size: .8em;
   margin: -.55em 0 .5em;
+}
+
+//////////////////////////////////////////
+//INTRO
+//////////////////////////////////////////
+.intro{
+  .intro-pics{
+    padding-bottom: 5em;
+  }
+  .left-content-wrapper{
+    @include span-columns(6);
+    @include media($tablet) {
+      @include span-columns(8);
+    }
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+  .title, .description{
+    color: #fff;
+  }
+
+  .description{
+    padding-bottom: 3em;
+  }
+
+  @include linear-gradient(desaturate(teal,50%), lighten(black,20%));
+  padding: 3em 0;
 }
 
 //////////////////////////////////////////
@@ -323,7 +375,7 @@ img, video, .video-container{
 //////////////////////////////////////////
 
 .spur{
-  background-color: transparentize(teal, .2);
+  background-color: transparentize(teal, 0);
   @include background-image(url("../img/spur-bg.png"));
   background-repeat: no-repeat;
   background-size: contain;
@@ -398,4 +450,19 @@ img, video, .video-container{
       height: 80%;
     }
   }
+}
+
+.wrapper{
+  margin-bottom: 40em;
+  box-shadow: 0 15px 32px rgba(0,0,0,.2);
+}
+
+.footer{
+  padding-top: 2em;
+  height: 40em;
+  width: 100%;
+  background-color: orange;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
 }
