@@ -134,6 +134,7 @@ img, video, .video-container{
 
   .name{
     text-indent: .07em;
+    //@TODO - fix this - find better solution
     padding-top: 44vh;
     @include span-columns(5);
     color: black;
