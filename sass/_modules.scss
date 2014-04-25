@@ -26,7 +26,6 @@
   //   }
 
 
-//@TODO make this work
 @mixin section-bg ($path-to-image, $bg-color, $bg-trans) {
   @include background-image(url($path-to-image));
   background-color: transparentize($bg-color, $bg-trans);
@@ -76,4 +75,170 @@
         @include span-columns(4);
       }
     }
+}
+
+
+/////////NAVIGATION
+
+nav a:before{
+  font-family: 'icomoon';
+}
+
+.hi-icon-wrap {
+  position: fixed;
+  bottom: 2em;
+  right: 4em;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.hi-icon-wrap2 {
+  position: fixed;
+  bottom: 2em;
+  right: 8.5em;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: transparentize(white, .7);
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+  color: lighten($light-black, 5%);
+}
+
+.hi-icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.hi-icon:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-size: 36px;
+  line-height: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hi-icon-effect-5 .hi-icon {
+  box-shadow: 0 0 0 4px rgba(255,255,255,.8);
+  overflow: hidden;
+  -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.hi-icon-effect-5 .hi-icon:after {
+  display: none;
+}
+
+.hi-icon-effect-5 .hi-icon:hover {
+  background: rgba(255,255,255,1);
+  color: $light-black;
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.3);
+}
+
+.hi-icon-effect-5c .hi-icon:hover:before {
+  -webkit-animation: toTopFromBottom 0.3s forwards;
+  -moz-animation: toTopFromBottom 0.3s forwards;
+  animation: toTopFromBottom 0.3s forwards;
+}
+
+@-webkit-keyframes toTopFromBottom {
+  49% {
+    -webkit-transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes toTopFromBottom {
+  49% {
+    -moz-transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0;
+    -moz-transform: translateY(100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@keyframes toTopFromBottom {
+  49% {
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
+
+.hi-icon-effect-5d .hi-icon:hover:before {
+  -webkit-animation: toBottomFromTop 0.3s forwards;
+  -moz-animation: toBottomFromTop 0.3s forwards;
+  animation: toBottomFromTop 0.3s forwards;
+}
+
+@-webkit-keyframes toBottomFromTop {
+  49% {
+    -webkit-transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes toBottomFromTop {
+  49% {
+    -moz-transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    -moz-transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@keyframes toBottomFromTop {
+  49% {
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
 }
