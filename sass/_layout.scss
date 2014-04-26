@@ -56,7 +56,7 @@ img, video, object{
 
 
 img, video, .video-container{
-  box-shadow: 0 15px 32px rgba(0,0,0,.2);
+  box-shadow: 0 3px 10px rgba(0,0,0,.3);
   margin: .7em 0;
 }
 
@@ -80,109 +80,6 @@ img, video, .video-container{
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-//Navigation layout
-// header{
-//   .header-block{
-//     position: absolute;
-//     padding-top: 6.75em;
-//     @include outer-container;
-//     z-index: 999;
-//   }
-//   background-color: transparent;
-//   width: 100%;
-//   height: 100%;
-//   a{
-//     margin: 0 1.5em;
-//     @include media($mobile) {
-//         display:block;
-//         }
-//   }
-//   nav{
-//     @include vertical-align;
-//     @include span-columns(12);
-
-//   }
-// }
-
-////////////////////////////////
-//HEADER
-////////////////////////////////
-
-
-
-//Deals with positioning on top intro image
-
-.page-head{
-  background-color: #fff;
-  @include background-image(url("../img/top-bg-bottom.png"), url('../img/top-bg-middle.png'), url('../img/top-bg-top.png'));
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center;
-
-  position: relative;
-  height: 100%;
-  width: 100%;
-  z-index: 999;
-  text-align: left;
-
-
-  .content-wrapper{
-    @include outer-container;
-  }
-
-  .name{
-    text-indent: .07em;
-    //@TODO - fix this - find better solution
-    padding-top: 44vh;
-    @include span-columns(5);
-    color: black;
-    line-height: .8em;
-    word-wrap: break-word;
-    @include media($tablet) {
-      font-size: 2.5em;
-      @include span-columns(4);
-    }
-
-    @include media($mobile) {
-      @include type(3);
-      @include span-columns(4);
-    }
-  }
-
-  .occupation{
-    @include span-columns(9);
-    padding-top: .8rem;
-    @include type(4);
-    color: black;
-    z-index: 999;
-    font-family: $light-header-font-stack;
-    @include media($tablet) {
-      @include type(5);
-    }
-  }
-
-  .arrow{
-    background-color: white;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 2em;
-    left: 3em;
-    width: 4.5em;
-    box-shadow: none;
-    opacity: .2;
-    @include transition (all .4s ease-in-out);
-    &:hover{
-      @include transition (all .4s ease-in-out);
-      bottom: 1.5em;
-      opacity: .6;
-    }
-    @include media($mobile) {
-      left: 1.75em;
-      width: 4em;
-    }
-  }
 }
 
 
@@ -250,19 +147,129 @@ img, video, .video-container{
   }
 }
 
-.project-info{
-  font-family: $header-font-stack;
-  font-size: .8em;
-  margin: -.55em 0 .5em;
+.description{
+  padding-bottom: 1em;
 }
+
+
+//Navigation layout
+// header{
+//   .header-block{
+//     position: absolute;
+//     padding-top: 6.75em;
+//     @include outer-container;
+//     z-index: 999;
+//   }
+//   background-color: transparent;
+//   width: 100%;
+//   height: 100%;
+//   a{
+//     margin: 0 1.5em;
+//     @include media($mobile) {
+//         display:block;
+//         }
+//   }
+//   nav{
+//     @include vertical-align;
+//     @include span-columns(12);
+
+//   }
+// }
+
+////////////////////////////////
+//HEADER
+////////////////////////////////
+
+
+
+//Deals with positioning on top intro image
+
+.page-head{
+  background-color: #fff;
+  @include background-image(url("../img/top-bg-bottom.png"), url('../img/top-bg-middle.png'), url('../img/top-bg-top.png'), url('../img/header-bg.jpg'));
+  background-size: contain, contain, contain, cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  text-align: left;
+
+
+  .content-wrapper{
+    @include outer-container;
+    padding-right: 60%;
+    @include media($tablet) {
+      padding-right: 42%;
+    }
+    @include media($mobile) {
+      padding-right: 39%;
+    }
+  }
+
+  .this-is-me{
+    margin-top: 50vh;
+    background-color: #fff;
+    padding: 1rem;
+    color: $light-black;
+  }
+
+    .name{
+    //@TODO - fix this - find better solution
+    @include type(4);
+    width:100%;
+    line-height: .8em;
+    word-wrap: break-word;
+    letter-spacing: .2rem;
+    @include media($tablet) {
+    }
+    @include media($mobile) {
+      @include type(5);
+    }
+  }
+
+ .occupation{
+    width:100%;
+    padding-bottom: 0;
+    @include type(6);
+    text-transform: uppercase;
+    color: black;
+    z-index: 999;
+    font-family: $light-header-font-stack;
+    @include media($tablet) {
+      @include type(7);
+    }
+  }
+
+  .arrow{
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2em;
+    left: 3em;
+    width: 4.5em;
+    box-shadow: none;
+    opacity: .2;
+    @include transition (all .4s ease-in-out);
+    &:hover{
+      @include transition (all .4s ease-in-out);
+      bottom: 1.5em;
+      opacity: .6;
+    }
+    @include media($mobile) {
+      left: 1.75em;
+      width: 4em;
+    }
+  }
+}
+
+
 
 //////////////////////////////////////////
 //INTRO
 //////////////////////////////////////////
 .intro{
-  .intro-pics{
-    padding-bottom: 2em;
-  }
   .left-content-wrapper{
     @include span-columns(6);
     @include media($tablet) {
@@ -274,14 +281,14 @@ img, video, .video-container{
   }
 
   .title, .description{
-    color: #fff;
+    color: $light-black;
   }
 
   .description{
     padding-bottom: 3em;
   }
-
-  @include linear-gradient(lighten(black,30%), lighten(black,20%));
+  background-color: #fff;
+  // @include linear-gradient(lighten(black,30%), lighten(black,20%));
   padding: 3em 0;
 }
 
@@ -290,7 +297,7 @@ img, video, .video-container{
 //////////////////////////////////////////
 
 .xango{
-  @include section-bg("../img/xango-bg.png",orange,0);
+  @include section-bg("../img/xango-bg.png",#e9913a,0);
   z-index: 999;
 
   //@TODO - ATTACHED BROWSER BAR
@@ -355,7 +362,7 @@ img, video, .video-container{
 //////////////////////////////////////////
 
 .spur{
-  @include section-bg("../img/spur-bg.png",#096985,0);
+  @include section-bg("../img/spur-bg.png",#499797,0);
   z-index: 999;
   // .browser{
   //   background-image: url('../img/browser-bar.png');
@@ -417,15 +424,15 @@ img, video, .video-container{
   box-shadow: 0 15px 32px rgba(0,0,0,.2);
 }
 
-footer{
+.outro{
   color: #fff;
-  @include background-image(url('../img/me.png'), url('../img/footer-bg.svg'));
-  background-size: contain, cover;
-  background-position: bottom right, center center;
+  @include background-image(url('../img/footer-bg.svg'));
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   &:after{
     content: "";
-    background-color: transparentize(black,.3);
+    background-color: transparentize(black,.2);
     @include position(absolute, 0px 0px 0px 0px);
     display: block;
     z-index: -2
@@ -455,6 +462,30 @@ footer{
       &:hover{
         color: #fff;
         background-color: darken(lightblue, 10%);
+      }
+    }
+    .dribbble{
+      background-color: #ea4c89;
+      &:hover{
+        background-color: darken(#ea4c89, 20%);
+      }
+    }
+    .github{
+      background-color: $light-black;
+      &:hover{
+        background-color: darken($light-black, 20%);
+      }
+    }
+    .twitter{
+      background-color: #55acee;
+      &:hover{
+        background-color: darken(#55acee, 20%);
+      }
+    }
+    .blog{
+      background-color: darken(#2DB5AD, 25%);
+      &:hover{
+        background-color: darken(#2DB5AD, 35%);
       }
     }
   }

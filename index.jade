@@ -11,18 +11,20 @@ html(lang="en")
     link(rel = "stylesheet" href="css/main.css")
 
   body
-    section(class="page-head")
+    section(class="page-head section")
       div(class="content-wrapper")
-        h1(class="name") Natty<br> Coleman
-        p(class="occupation").
-          UX Designer
-        nav(class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5d")
-          a(href="#work" id="#next" class="icon-arrow-down hi-icon") Next
-        nav(class="hi-icon-wrap2 hi-icon-effect-5 hi-icon-effect-5c")
-          a(href="#work" id="#prev" class="icon-arrow-up hi-icon hi-icon-effect-5 hi-icon-effect-5d") Previous
+        div(class="this-is-me")
+          h1(class="name") Natty Coleman
+          p(class="occupation").
+            UX Designer
+        nav
+          div(class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5d")
+            a(href="#" id="next" class="next icon-arrow-down hi-icon") Next
+          div(class="hi-icon-wrap2 hi-icon-effect-5 hi-icon-effect-5c")
+            a(href="#" id="prev" class="prev icon-arrow-up hi-icon") Previous
 
     div(class="wrapper")
-      section(class="intro")
+      section(class="intro section" id="one")
         div(class="content-block-center")
           div(class="left-content-wrapper")
             h1(class="title") Art is hard
@@ -34,7 +36,7 @@ html(lang="en")
             img(src="../img/intro-box-3-2.jpg" class="quarter")
             img(src="../img/intro-box-4-1.jpg" class="quarter-end")
 
-      section(class="xango" id="work")
+      section(class="xango section" id="two")
         div(class="content-block-center")
           div(class="right-content-wrapper")
             h1(class="title") XANGO
@@ -59,7 +61,7 @@ html(lang="en")
           div(class="video-container full")
             iframe(width="1280" height="720" src="https://www.youtube.com/embed/9QLzCGZDfUE?rel=0&autoplay=0&controls=0&colors=white&playsinline=1" frameborder="0" allowfullscreen="true" autoplay="0" controls="0" playsinline="1" color="white")
 
-      section(class="blacksmith")
+      section(class="blacksmith section" id="three")
         div(class="content-block-center")
           div(class="left-content-wrapper")
             h1(class="title hyphenate") BLACK&shy;SMITH MFG
@@ -81,7 +83,7 @@ html(lang="en")
           img(src="../img/bsmfg-isis-pic1.jpg" class="half-left")
           img(src="../img/bsmfg-isis-pic2.jpg" class="half-right")
 
-      section(class="spur")
+      section(class="spur section" id="four")
         div(class="content-block-center")
           div(class="right-content-wrapper")
             h1(class="title") Spur
@@ -97,7 +99,7 @@ html(lang="en")
           img(src="../img/spur-pic-4.jpg" class="half-left")
           img(src="../img/spur-pic-5.jpg" class="half-right")
 
-      section(class="sbdc")
+      section(class="sbdc section" id="five")
         div(class="content-block-center")
           div(class="left-content-wrapper")
             h1(class="title") Utah SBDC
@@ -111,25 +113,20 @@ html(lang="en")
           img(src="../img/sbdc-site-3.jpg" class="half-left")
           img(src="../img/sbdc-site-4.jpg" class="half-right")
 
-    footer
+    section(class="outro section")
       div(class="content-block-center")
         div(class="left-content-wrapper")
           h1(class="title") About this guy
           p(class="description").
             More words go here.
-      div(class="social-links")
+      footer(class="social-links")
         a(href="#" class="dribbble") Dribbble
         a(href="#" class="github") GitHub
         a(href="#" class="twitter") Twitter
         a(href="#" class="blog") Blog
 
 
-
-
-
-
-
-    script(type="javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
-    script(type="javascript" src="../js/vendor/jquery-1.10.2.min.js")
-    script(type="javascript" src="../js/min/plugins.min.js")
-    script(type="javascript" src="../js/min/main.min.js")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+    script(src="../js/vendor/jquery-1.10.2.min.js")
+    script(src="../js/min/plugins.min.js")
+    script(src="../js/min/main.min.js")

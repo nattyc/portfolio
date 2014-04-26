@@ -1,11 +1,13 @@
-@include font-face(AvenirLTStd-Light, '../fonts/AvenirLTStd-Light');
-@include font-face(AvenirLTStd-Medium, '../fonts/AvenirLTStd-Medium',normal);
-@include font-face(AvenirLTStd-MediumOblique, '../fonts/AvenirLTStd-MediumOblique',normal, italic);
-@include font-face(AvenirLTStd-Heavy, '../fonts/AvenirLTStd-Heavy',bold);
-@include font-face(Sentinel-Light, '../fonts/Sentinel-Light',normal);
-@include font-face(Sentinel-LightItalic, '../fonts/Sentinel-LightItalic',normal, italic);
+// @include font-face(AvenirLTStd-Light, '../fonts/AvenirLTStd-Light');
+// @include font-face(AvenirLTStd-Medium, '../fonts/AvenirLTStd-Medium',normal);
+// @include font-face(AvenirLTStd-MediumOblique, '../fonts/AvenirLTStd-MediumOblique',normal, italic);
+// @include font-face(AvenirLTStd-Heavy, '../fonts/AvenirLTStd-Heavy',bold);
+// @include font-face(Sentinel-Light, '../fonts/Sentinel-Light',normal);
+// @include font-face(Sentinel-LightItalic, '../fonts/Sentinel-LightItalic',normal, italic);
 // @include font-face(Sentinel-MediumItalic, '../fonts/Sentinel-MediumItalic',bold, italic);
-
+@include font-face(Brandon-Light, '../fonts/Brandon_light',normal);
+@include font-face(Brandon-Bold, '../fonts/Brandon_bld',bold);
+@include font-face(Sentinel-Book, '../fonts/Sentinel-Book',normal);
 
 @font-face {
   font-family: 'icomoon';
@@ -53,11 +55,10 @@
 
 
 //font stack variables
-$header-font-stack: 'AvenirLTStd-Heavy', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$light-header-font-stack: 'AvenirLTStd-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$paragraph-font-stack: 'AvenirLTStd-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$italic-font-stack: 'AvenirLTStd-MediumOblique', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$formal-header-stack: 'Sentinel-LightItalic', 'Garamond', Times, 'Hoefler Text', 'Times New Roman', serif;
+$header-font-stack: 'Brandon-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$light-header-font-stack: 'Brandon-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$paragraph-font-stack: 'Sentinel-Book', 'Garamond', Times, 'Hoefler Text', 'Times New Roman', serif;
+$formal-header-stack: 'Brandon-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 //modular type calculations
 $type-ratio: 1.25; // major third
@@ -121,10 +122,9 @@ $type-margin-bottom: $type-base * $pwr-2;
 h1{
   @include type(1);
   font-family: $formal-header-stack;
-  font-variant: normal;
+  text-indent: -.07em;
   letter-spacing: -.15rem;
   line-height: 1em;
-  font-weight: 200;
   text-transform: uppercase;
   padding-bottom: .75rem;
   word-wrap: break-word;
@@ -133,6 +133,11 @@ h1{
 p{
   @include type(7);
   font-family: $paragraph-font-stack;
+  line-height: 1.25em;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
 }
 
 a{
@@ -148,7 +153,7 @@ span{
   font-family: $light-header-font-stack;
   font-size: .75rem;
   border: 1px solid grey;
-  padding: .5rem .5rem .4rem .5rem;
+  padding: .4rem;
   @include border-top-radius(5px);
   @include border-bottom-radius(5px);
   @include border-left-radius(5px);
@@ -158,4 +163,7 @@ span{
 
 .project-info{
   text-transform: uppercase;
+  font-family: $header-font-stack;
+  font-size: .8em;
+  margin: -.55em 0 .5em;
 }
