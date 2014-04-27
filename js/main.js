@@ -1,3 +1,4 @@
+
 var next;
 $('.next').click(function() {
     if (next === undefined) {

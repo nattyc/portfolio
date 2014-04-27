@@ -1704,7 +1704,7 @@ video,
   -webkit-background-size: contain, contain, contain, cover;
   background-size: contain, contain, contain, cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top center, top center, top center, 70% center;
   position: relative;
   height: 100%;
   width: 100%;
@@ -1712,7 +1712,7 @@ video,
   text-align: left;
 }
 
-/* line 200, _layout.scss */
+/* line 203, _layout.scss */
 
 .page-head .content-wrapper {
   *zoom: 1;
@@ -1737,7 +1737,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 200, _layout.scss */
+  /* line 203, _layout.scss */
 
   .page-head .content-wrapper {
     padding-right: 42%;
@@ -1745,23 +1745,35 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 200, _layout.scss */
+  /* line 203, _layout.scss */
 
   .page-head .content-wrapper {
     padding-right: 39%;
   }
 }
 
-/* line 211, _layout.scss */
+/* line 214, _layout.scss */
 
 .page-head .this-is-me {
-  margin-top: 50vh;
+  position: absolute;
+  width: 20em;
+  left: 5%;
+  bottom: 10%;
   background-color: #fff;
   padding: 1rem;
   color: #333333;
 }
 
-/* line 218, _layout.scss */
+@media screen and (max-width: 565px) {
+  /* line 214, _layout.scss */
+
+  .page-head .this-is-me {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* line 228, _layout.scss */
 
 .page-head .name {
   font-size: 31.25px;
@@ -1773,7 +1785,7 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 218, _layout.scss */
+  /* line 228, _layout.scss */
 
   .page-head .name {
     font-size: 25px;
@@ -1781,7 +1793,7 @@ video,
   }
 }
 
-/* line 232, _layout.scss */
+/* line 241, _layout.scss */
 
 .page-head .occupation {
   width: 100%;
@@ -1795,7 +1807,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 232, _layout.scss */
+  /* line 241, _layout.scss */
 
   .page-head .occupation {
     font-size: 16px;
@@ -1803,7 +1815,7 @@ video,
   }
 }
 
-/* line 245, _layout.scss */
+/* line 254, _layout.scss */
 
 .page-head .arrow {
   background-color: white;
@@ -1819,7 +1831,7 @@ video,
   transition: all 0.4s ease-in-out;
 }
 
-/* line 255, _layout.scss */
+/* line 264, _layout.scss */
 
 .page-head .arrow:hover {
   -webkit-transition: all 0.4s ease-in-out;
@@ -1829,7 +1841,7 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 245, _layout.scss */
+  /* line 254, _layout.scss */
 
   .page-head .arrow {
     left: 1.75em;
@@ -1837,14 +1849,21 @@ video,
   }
 }
 
-/* line 272, _layout.scss */
+/* line 276, _layout.scss */
+
+nav {
+  z-index: 999;
+  position: relative;
+}
+
+/* line 286, _layout.scss */
 
 .intro {
   background-color: #fff;
   padding: 3em 0;
 }
 
-/* line 273, _layout.scss */
+/* line 287, _layout.scss */
 
 .intro .left-content-wrapper {
   float: left;
@@ -1860,7 +1879,7 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 273, _layout.scss */
+  /* line 287, _layout.scss */
 
   .intro .left-content-wrapper {
     float: left;
@@ -1877,7 +1896,7 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 273, _layout.scss */
+  /* line 287, _layout.scss */
 
   .intro .left-content-wrapper {
     float: left;
@@ -1893,20 +1912,20 @@ video,
   }
 }
 
-/* line 283, _layout.scss */
+/* line 297, _layout.scss */
 
 .intro .title,
 .intro .description {
   color: #333333;
 }
 
-/* line 287, _layout.scss */
+/* line 301, _layout.scss */
 
 .intro .description {
   padding-bottom: 3em;
 }
 
-/* line 299, _layout.scss */
+/* line 313, _layout.scss */
 
 .xango {
   background-image: url("../img/xango-bg.png");
@@ -1990,27 +2009,27 @@ video,
 }
 
 @media screen and (max-width: 800px) {
-  /* line 316, _layout.scss */
+  /* line 330, _layout.scss */
 
   .xango .right-content-wrapper {
     padding-bottom: 2em;
   }
 }
 
-/* line 323, _layout.scss */
+/* line 337, _layout.scss */
 
 .xango h1 {
   color: #fff;
 }
 
-/* line 327, _layout.scss */
+/* line 341, _layout.scss */
 
 .xango span {
   color: #fff;
   border-color: #fff;
 }
 
-/* line 341, _layout.scss */
+/* line 355, _layout.scss */
 
 .blacksmith {
   background-image: url("../img/china-bg.png");
@@ -2080,14 +2099,14 @@ video,
   }
 }
 
-/* line 344, _layout.scss */
+/* line 358, _layout.scss */
 
 .blacksmith .left-content-wrapper {
   padding-top: .6em;
   padding-bottom: 2rem;
 }
 
-/* line 347, _layout.scss */
+/* line 361, _layout.scss */
 
 .blacksmith .left-content-wrapper h1,
 .blacksmith .left-content-wrapper h2,
@@ -2095,20 +2114,20 @@ video,
   color: #fff;
 }
 
-/* line 351, _layout.scss */
+/* line 365, _layout.scss */
 
 .blacksmith span {
   color: #fff;
   border-color: #fff;
 }
 
-/* line 355, _layout.scss */
+/* line 369, _layout.scss */
 
 .blacksmith video {
   height: 100%;
 }
 
-/* line 364, _layout.scss */
+/* line 378, _layout.scss */
 
 .spur {
   background-image: url("../img/spur-bg.png");
@@ -2191,7 +2210,7 @@ video,
   }
 }
 
-/* line 379, _layout.scss */
+/* line 393, _layout.scss */
 
 .spur p,
 .spur h1,
@@ -2200,19 +2219,19 @@ video,
   color: #fff;
 }
 
-/* line 382, _layout.scss */
+/* line 396, _layout.scss */
 
 .spur h1 {
   padding-bottom: .75rem;
 }
 
-/* line 385, _layout.scss */
+/* line 399, _layout.scss */
 
 .spur span {
   border-color: #fff;
 }
 
-/* line 396, _layout.scss */
+/* line 410, _layout.scss */
 
 .sbdc {
   background-image: url("../img/sbdc-bg.png");
@@ -2223,6 +2242,7 @@ video,
   background-size: contain;
   padding-top: 3em;
   padding-bottom: 3em;
+  z-index: 999;
 }
 
 /* line 71, _modules.scss */
@@ -2282,14 +2302,14 @@ video,
   }
 }
 
-/* line 399, _layout.scss */
+/* line 414, _layout.scss */
 
 .sbdc .left-content-wrapper {
   padding-top: .6em;
   padding-bottom: 2rem;
 }
 
-/* line 402, _layout.scss */
+/* line 417, _layout.scss */
 
 .sbdc .left-content-wrapper h1,
 .sbdc .left-content-wrapper h2,
@@ -2297,20 +2317,20 @@ video,
   color: #fff;
 }
 
-/* line 406, _layout.scss */
+/* line 421, _layout.scss */
 
 .sbdc span {
   color: #fff;
   border-color: #fff;
 }
 
-/* line 410, _layout.scss */
+/* line 425, _layout.scss */
 
 .sbdc video {
   height: 80%;
 }
 
-/* line 422, _layout.scss */
+/* line 437, _layout.scss */
 
 .wrapper {
   margin-bottom: 45em;
@@ -2318,7 +2338,7 @@ video,
   box-shadow: 0 15px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* line 427, _layout.scss */
+/* line 444, _layout.scss */
 
 .outro {
   color: #fff;
@@ -2336,7 +2356,7 @@ video,
   z-index: -1;
 }
 
-/* line 433, _layout.scss */
+/* line 450, _layout.scss */
 
 .outro:after {
   content: "";
@@ -2350,7 +2370,7 @@ video,
   z-index: -2;
 }
 
-/* line 447, _layout.scss */
+/* line 464, _layout.scss */
 
 .outro .social-links {
   content: '';
@@ -2361,6 +2381,7 @@ video,
   width: 100%;
   position: absolute;
   bottom: 0;
+  z-index: 1;
 }
 
 /* line 18, bourbon/addons/_clearfix.scss */
@@ -2377,9 +2398,11 @@ video,
   clear: both;
 }
 
-/* line 453, _layout.scss */
+/* line 471, _layout.scss */
 
 .outro .social-links a {
+  font-family: "Brandon-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   text-align: center;
   height: 4em;
   background-color: lightblue;
@@ -2404,56 +2427,56 @@ video,
   clear: left;
 }
 
-/* line 462, _layout.scss */
+/* line 482, _layout.scss */
 
 .outro .social-links a:hover {
   color: #fff;
   background-color: #86c5da;
 }
 
-/* line 467, _layout.scss */
+/* line 487, _layout.scss */
 
 .outro .social-links .dribbble {
   background-color: #ea4c89;
 }
 
-/* line 469, _layout.scss */
+/* line 489, _layout.scss */
 
 .outro .social-links .dribbble:hover {
   background-color: #ba1655;
 }
 
-/* line 473, _layout.scss */
+/* line 493, _layout.scss */
 
 .outro .social-links .github {
   background-color: #333333;
 }
 
-/* line 475, _layout.scss */
+/* line 495, _layout.scss */
 
 .outro .social-links .github:hover {
   background-color: black;
 }
 
-/* line 479, _layout.scss */
+/* line 499, _layout.scss */
 
 .outro .social-links .twitter {
   background-color: #55acee;
 }
 
-/* line 481, _layout.scss */
+/* line 501, _layout.scss */
 
 .outro .social-links .twitter:hover {
   background-color: #147bc9;
 }
 
-/* line 485, _layout.scss */
+/* line 505, _layout.scss */
 
 .outro .social-links .blog {
   background-color: #144f4b;
 }
 
-/* line 487, _layout.scss */
+/* line 507, _layout.scss */
 
 .outro .social-links .blog:hover {
   background-color: #092624;
