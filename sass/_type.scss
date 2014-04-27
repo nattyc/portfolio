@@ -122,7 +122,7 @@ $type-margin-bottom: $type-base * $pwr-2;
 h1{
   @include type(1);
   font-family: $formal-header-stack;
-  text-indent: -.07em;
+  text-indent: -.03em;
   letter-spacing: -.15rem;
   line-height: 1em;
   text-transform: uppercase;
