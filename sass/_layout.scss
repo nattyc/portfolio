@@ -219,7 +219,7 @@ img, video, .video-container{
     background-color: #fff;
     padding: 1rem;
     color: $light-black;
-    @include media($mobile){
+    @include media($mobile) {
       width: 100%;
       left: 0;
     }
@@ -273,9 +273,13 @@ img, video, .video-container{
   }
 }
 
-nav{
+.nav-wrapper{
+  width: 15em;
   z-index: 999;
   position: relative;
+  margin-left: 80%;
+  margin-top: 5%;
+  padding-top: 45%;
   @include media($mobile) {
     display: none;
   }
@@ -453,6 +457,9 @@ nav{
     video{
       height: 80%;
     }
+    margin-bottom: 45em;
+  box-shadow: 0 15px 32px rgba(0,0,0,.2);
+
 }
 
 
@@ -464,8 +471,6 @@ nav{
 
 //wrapper
 .wrapper{
-  margin-bottom: 45em;
-  box-shadow: 0 15px 32px rgba(0,0,0,.2);
 
 
 }

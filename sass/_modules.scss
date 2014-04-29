@@ -92,26 +92,16 @@ nav a:before{
 
 .hi-icon-wrap {
   opacity: .8;
-  position: fixed;
-  bottom: 2em;
-  right: 4em;
+  display: inline-block;
   text-align: center;
-  padding: 1em 0;
-  @include media($mobile) {
-    right: 2em;
-  }
+  padding: 1em .25em;
 }
 
 .hi-icon-wrap2 {
   opacity: .8;
-  position: fixed;
-  bottom: 2em;
-  right: 8.5em;
+  display: inline-block;
   text-align: center;
-  padding: 1em 0;
-  @include media($mobile) {
-    right: 6.5em;
-  }
+  padding: 1em .25em;
 }
 
 .hi-icon {
