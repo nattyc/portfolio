@@ -2334,9 +2334,6 @@ video,
   padding-top: 3em;
   padding-bottom: 3em;
   z-index: 999;
-  margin-bottom: 45em;
-  -webkit-box-shadow: 0 15px 32px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.2);
 }
 
 /* line 71, _modules.scss */
@@ -2424,7 +2421,7 @@ video,
   height: 80%;
 }
 
-/* line 478, _layout.scss */
+/* line 475, _layout.scss */
 
 .outro {
   color: #fff;
@@ -2434,15 +2431,12 @@ video,
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  z-index: 1;
   padding-top: 2em;
-  height: 45em;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: -1;
 }
 
-/* line 484, _layout.scss */
+/* line 482, _layout.scss */
 
 .outro:after {
   content: "";
@@ -2453,20 +2447,19 @@ video,
   bottom: 0px;
   left: 0px;
   display: block;
-  z-index: -2;
+  z-index: 1;
 }
 
-/* line 498, _layout.scss */
+/* line 494, _layout.scss */
 
 .outro .social-links {
   content: '';
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
+  z-index: 2;
+  margin-top: 25em;
 }
 
-/* line 504, _layout.scss */
+/* line 499, _layout.scss */
 
 .outro .social-links a {
   display: inline-block;
@@ -2481,63 +2474,63 @@ video,
 }
 
 @media screen and (max-width: 565px) {
-  /* line 504, _layout.scss */
+  /* line 499, _layout.scss */
 
   .outro .social-links a {
     width: 50%;
   }
 }
 
-/* line 519, _layout.scss */
+/* line 511, _layout.scss */
 
 .outro .social-links a:hover {
   color: #fff;
 }
 
-/* line 523, _layout.scss */
+/* line 515, _layout.scss */
 
 .outro .social-links .dribbble {
-  background-color: #ae8897;
+  background-color: #9b9b9b;
 }
 
-/* line 525, _layout.scss */
+/* line 517, _layout.scss */
 
 .outro .social-links .dribbble:hover {
   background-color: #cc6a90;
 }
 
-/* line 529, _layout.scss */
+/* line 521, _layout.scss */
 
 .outro .social-links .github {
-  background-color: #4d4d4d;
+  background-color: gray;
 }
 
-/* line 531, _layout.scss */
+/* line 523, _layout.scss */
 
 .outro .social-links .github:hover {
   background-color: #333333;
 }
 
-/* line 535, _layout.scss */
+/* line 527, _layout.scss */
 
 .outro .social-links .twitter {
-  background-color: #84a6bf;
+  background-color: #a2a2a2;
 }
 
-/* line 537, _layout.scss */
+/* line 529, _layout.scss */
 
 .outro .social-links .twitter:hover {
   background-color: #68a9db;
 }
 
-/* line 541, _layout.scss */
+/* line 533, _layout.scss */
 
 .outro .social-links .blog {
-  background-color: #1b232a;
+  background-color: #727272;
 }
 
-/* line 543, _layout.scss */
+/* line 535, _layout.scss */
 
 .outro .social-links .blog:hover {
-  background-color: #112334;
+  background-color: #333333;
 }

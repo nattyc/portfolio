@@ -457,9 +457,6 @@ img, video, .video-container{
     video{
       height: 80%;
     }
-    margin-bottom: 45em;
-  box-shadow: 0 15px 32px rgba(0,0,0,.2);
-
 }
 
 
@@ -478,6 +475,7 @@ img, video, .video-container{
 .outro{
   color: #fff;
   @include background-image(url('../img/footer-bg.svg'));
+  // height: 45em;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -486,21 +484,18 @@ img, video, .video-container{
     background-color: transparentize(black,.2);
     @include position(absolute, 0px 0px 0px 0px);
     display: block;
-    z-index: -2;
+    z-index: 1;
   }
+  z-index: 1;
   padding-top: 2em;
-  height: 45em;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: -1;
+
 
   .social-links{
     content: '';
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
+    z-index: 2;
+    margin-top: 25em;
     a{
       display: inline-block;
       font-family: $header-font-stack;
@@ -509,9 +504,6 @@ img, video, .video-container{
       height: 4em;
       width: 25%;
       line-height: 4em;
-      // @include span-columns(3);
-      // @include pad();
-      // @include omega(4n);
       transition: .25s;
       @include media ($mobile) {
         width: 50%;
@@ -521,27 +513,27 @@ img, video, .video-container{
       }
     }
     .dribbble{
-      background-color: desaturate(#ea4c89, 60%);
+      background-color: desaturate(#ea4c89, 100%);
       &:hover{
         background-color: desaturate(#ea4c89, 30%);
       }
     }
     .github{
-      background-color: lighten($light-black, 10%);
+      background-color: lighten($light-black, 30%);
       &:hover{
         background-color: $light-black;
       }
     }
     .twitter{
-      background-color: desaturate(#55acee, 50%);
+      background-color: desaturate(#55acee, 100%);
       &:hover{
         background-color: desaturate(#55acee, 20%);
       }
     }
     .blog{
-      background-color: desaturate(#112334, 30%);
+      background-color: darken(#7f7f7f, 5%);
       &:hover{
-        background-color: desaturate(#112334, 0);
+        background-color: darken(#7f7f7f, 30%);
       }
     }
   }
