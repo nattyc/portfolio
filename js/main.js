@@ -1,7 +1,7 @@
-Echo.init({
-    offset: 100,
-    throttle: 250
-  });
+$("img.lazy").lazyload({
+    effect : "fadeIn"
+});
+
 
 
 var $sections = $('.section');
