@@ -261,10 +261,7 @@ img.lazy{
   z-index: 999;
   position: absolute;
   bottom:3em;
-  right: 2em;
-  // margin-left: 80%;
-  // margin-top: 5%;
-  // padding-top: 45%;
+  right: 1em;
   @include media($mobile) {
     display: none;
   }
@@ -290,11 +287,15 @@ img.lazy{
     color: $light-black;
   }
 
+  .title{
+  @include span-columns(12);
+  text-indent: .05em;
+  }
+
   .description{
-    padding-bottom: 3em;
+    padding-bottom: 1em;
   }
   background-color: #fff;
-  // @include linear-gradient(lighten(black,30%), lighten(black,20%));
   padding: 3em 0;
 }
 
@@ -303,20 +304,8 @@ img.lazy{
 //////////////////////////////////////////
 
 .xango{
-  @include section-bg("../img/xango-bg.png",#e9913a,0);
+  @include section-bg("../img/xango-bg.png",#d48634,0);
   z-index: 999;
-
-  //@TODO - ATTACHED BROWSER BAR
-  // .browser{
-  //   background-image: url('../img/browser-bar.png');
-  //   background-size: 100% 100%;
-  //   background-repeat: no-repeat;
-  //   width: 100%;
-  //   height: 2em;
-  //   margin: 0;
-  //   z-index:1000;
-  // }
-
 
   @include right-wrapper;
   .right-content-wrapper{
@@ -343,16 +332,15 @@ img.lazy{
 //////////////////////////////////////////
 
 
-//@TODO Make this chunk a reusable module
 .blacksmith{
   @include section-bg("../img/china-bg.png",$light-black,0);
   @include left-wrapper;
   .left-content-wrapper{
     padding-top: .6em;
     padding-bottom: 2rem;
-      h1, h2, p{
-        color: #fff;
-      }
+    h1, h2, p{
+      color: #fff;
+    }
     }
     span{
       color: #fff;
@@ -370,18 +358,7 @@ img.lazy{
 .spur{
   @include section-bg("../img/spur-bg.png",#499797,0);
   z-index: 999;
-  // .browser{
-  //   background-image: url('../img/browser-bar.png');
-  //   background-size: 100% 100%;
-  //   background-repeat: no-repeat;
-  //   width: 100%;
-  //   height: 2em;
-  //   margin: 0;
-  //   z-index:1000;
-  // }
-
   @include right-wrapper;
-
   p, h1, span, .project-info{
     color:#fff;
   }
@@ -425,7 +402,7 @@ img.lazy{
 //////////////////////////////////////////
 
 .personal{
-  @include section-bg("../img/sbdc-bg.png",desaturate(#13323a,30%),0);
+  @include section-bg("../img/personal-projects-bg.png",desaturate(#13323a,30%),0);
   @include left-wrapper;
   z-index: 999;
   .left-content-wrapper{
@@ -451,11 +428,6 @@ img.lazy{
 //FOOTER
 //////////////////////////////////////////
 
-//wrapper
-.wrapper{
-
-
-}
 
 .outro{
   color: #fff;
@@ -464,18 +436,26 @@ img.lazy{
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  &:after{
-    content: "";
-    background-color: transparentize(black,.2);
-    @include position(absolute, 0px 0px 0px 0px);
-    display: block;
-    z-index: 1;
-  }
   z-index: 1;
   padding-top: 2em;
   width: 100%;
+  @include left-wrapper;
   .title{
     @include type(2);
+  }
+  .learning-bar{
+    padding-top: 1em;
+    margin-bottom: -23em;
+    h1, span{
+      font-family: $formal-header-stack;
+      border: none;
+      @include type(4);
+      color: #fff;
+    }
+  }
+   #spidergraphcontainer{
+    width: 600px;
+    height: 600px;
   }
 
 

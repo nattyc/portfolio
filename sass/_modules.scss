@@ -159,6 +159,7 @@ nav a:before{
   background: rgba(255,255,255,1);
   color: $light-black;
   box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+  transition: .25s;
 }
 
 .hi-icon-effect-5c .hi-icon:hover:before {

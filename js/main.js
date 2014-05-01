@@ -1,8 +1,21 @@
 $("img.lazy").lazyload({
-    effect : "fadeIn"
+  effect : "fadeIn"
 });
 
+$(function () {
+  $('[data-typer-targets]').typer();
+});
 
+$('#spidergraphcontainer').spidergraph({
+  'fields': ['a','b','c','d','e'],
+  'gridcolor': 'rgba(20,20,20,1)'
+});
+
+$('#spidergraphcontainer').spidergraph('addlayer', {
+    'strokecolor': 'rgba(230,204,0,0.8)',
+    'fillcolor': 'rgba(230,204,0,0.6)',
+    'data': [5, 4, 9, 8, 1]
+});
 
 var $sections = $('.section');
 
