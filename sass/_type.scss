@@ -162,8 +162,10 @@ p{
 a{
   text-decoration: none;
   color: #fff;
+  background-color: rgba(0,0,0,.2);
   &:hover{
     color: $light-black;
+    background-color: rgba(0,0,0,0);
   }
 }
 

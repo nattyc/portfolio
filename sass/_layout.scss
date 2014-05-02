@@ -1,6 +1,6 @@
 $mobile: new-breakpoint(max-width 565px 4);
-$tablet: new-breakpoint(max-width 800px 8);
-$desktop: new-breakpoint(min-width 801px 12);
+$tablet: new-breakpoint(max-width 900px 8);
+$desktop: new-breakpoint(min-width 901px 12);
 
 
 //Positioning Mixins
@@ -48,6 +48,7 @@ html, body{
 
 img, video, object{
   max-width: 100%;
+  width: 100%;
 }
 
 
@@ -59,6 +60,7 @@ img, video, object{
 img, video, .video-container{
   box-shadow: 0 3px 10px rgba(0,0,0,.3);
   margin: .7em 0;
+  height: auto;
 }
 
 .img-trans{
@@ -66,7 +68,9 @@ img, video, .video-container{
 }
 
 img.lazy{
-  background: rgba(0,0,0,.2) url('../img/blank.gif') no-repeat center center;
+  background: #fff url('../img/blank.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: 32px 32px;
 }
 
@@ -75,7 +79,8 @@ img.lazy{
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
+    padding-top: 30px; height: 0;
+    overflow: hidden;
 }
 
 .video-container iframe,
@@ -144,12 +149,15 @@ img.lazy{
 
 .two-third{
   @include span-columns(8);
+  @include shift(2);
   // padding: .75rem 0;
   @include media($tablet) {
     @include span-columns(6);
+    @include shift(1);
   }
   @include media($mobile) {
     @include span-columns(4);
+    @include shift(0);
   }
 }
 
@@ -307,15 +315,26 @@ img.lazy{
   @include section-bg("../img/xango-bg.png",#d48634,0);
   z-index: 999;
 
-  @include right-wrapper;
+
+  .xango-vid{
+    @include media($tablet) {
+    @include shift(3);
+    }
+    @include media($mobile) {
+      @include shift(0);
+    }
+  }
+
+  @include float-right-wrapper;
   .right-content-wrapper{
+    padding-bottom: 2em;
      @include media($tablet) {
       padding-bottom: 2em;
     }
 
   }
 
-  h1{
+  h1,p,.project-info{
     color: #fff;
   }
 
@@ -380,6 +399,14 @@ img.lazy{
   @include section-bg("../img/sbdc-bg.png",#9f4635,0);
   @include left-wrapper;
   z-index: 999;
+  .img-trans{
+    @include media($tablet) {
+      @include shift(1);
+    }
+    @include media($mobile) {
+      @include shift(0);
+    }
+  }
   .left-content-wrapper{
     padding-top: .6em;
     padding-bottom: 2rem;
@@ -439,31 +466,39 @@ img.lazy{
   z-index: 1;
   padding-top: 2em;
   width: 100%;
+  a{
+    background-color: teal;
+    padding: 0 .2em;
+    transition: .25s;
+    &:hover{
+      background-color: darken(teal,5%);
+      color: #fff;
+    }
+  }
   @include left-wrapper;
   .title{
     @include type(2);
   }
-  .learning-bar{
-    padding-top: 1em;
-    margin-bottom: -23em;
-    h1, span{
-      font-family: $formal-header-stack;
-      border: none;
-      @include type(4);
-      color: #fff;
-    }
-  }
-   #spidergraphcontainer{
-    width: 600px;
-    height: 600px;
-  }
+  // .learning-bar{
+  //   padding-top: 1em;
+  //   margin-bottom: -23em;
+  //   h1, span{
+  //     font-family: $formal-header-stack;
+  //     border: none;
+  //     @include type(5);
+  //     color: #fff;
+  //     letter-spacing: .07rem;
+  //     border-radius: 0;
+  //   }
+  // }
+
 
 
   .social-links{
     content: '';
     width: 100%;
     z-index: 2;
-    margin-top: 25em;
+    margin-top: 5em;
     a{
       display: inline-block;
       font-family: $header-font-stack;
