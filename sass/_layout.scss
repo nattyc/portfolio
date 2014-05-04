@@ -270,7 +270,7 @@ img.lazy{
   position: absolute;
   bottom:3em;
   right: 1em;
-  @include media($mobile) {
+  @include media($tablet) {
     display: none;
   }
 }

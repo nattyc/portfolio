@@ -1884,7 +1884,7 @@ img.lazy {
   right: 1em;
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 900px) {
   /* line 267, _layout.scss */
 
   .nav-wrapper {
