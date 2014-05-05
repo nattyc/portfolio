@@ -474,13 +474,21 @@ img.lazy{
 
 .personal{
   @include section-bg("../img/personal-projects-bg.png",desaturate(#13323a,30%),0);
-  @include right-wrapper;
+  @include float-right-wrapper;
   z-index: 999;
   .right-content-wrapper{
     padding-top: .6em;
     padding-bottom: 2rem;
     h1, h2, p{
       color: #fff;
+    }
+  }
+  .img-trans{
+    @include media($tablet) {
+      @include shift(1);
+    }
+    @include media($mobile) {
+      @include shift(0);
     }
   }
     span{
@@ -521,15 +529,18 @@ img.lazy{
 
 
 .outro{
-  color: #fff;
-  @include background-image(url('../img/footer-bg.svg'));
+  color: $light-black;
+  @include background-image(url('../img/bottom-bg.svg'));
   // height: 45em;
-  background-size: cover;
-  background-position: center center;
+  background-size: contain;
+  background-position: bottom center;
   background-repeat: no-repeat;
   z-index: 1;
-  padding-top: 2em;
+  padding-top: 2.25em;
   width: 100%;
+  .description:nth-child(5){
+    padding-bottom: 5em;
+  }
   a{
     background-color: teal;
     padding: 0 .2em;
