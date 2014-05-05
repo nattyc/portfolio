@@ -81,8 +81,8 @@ $type-ratio: 1.25; // major third
 $pwr-2: $type-ratio * $type-ratio;
 $pwr-3: $type-ratio * $type-ratio * $type-ratio;
 $pwr-4: $type-ratio * $type-ratio * $type-ratio * $type-ratio;
-$type-base: 1rem; // 16px
-$type-base-px: 16px;
+$type-base: .975rem; // 16px
+$type-base-px: 14px;
 $line-height-base: $type-ratio;
 $type-margin-bottom: $type-base * $pwr-2;
 
@@ -163,8 +163,9 @@ a{
   text-decoration: none;
   color: #fff;
   background-color: rgba(0,0,0,.2);
+  transition: .25s;
   &:hover{
-    color: $light-black;
+    color: #fff;
     background-color: rgba(0,0,0,0);
   }
 }

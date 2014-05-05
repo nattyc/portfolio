@@ -126,6 +126,7 @@ img.lazy{
 
 .quarter{
   @include span-columns(3);
+  @include pad();
   @include media($tablet) {
     @include span-columns(4);
     @include omega(2n);
@@ -136,6 +137,7 @@ img.lazy{
 }
 
 .quarter-end{
+  @include pad();
   @include span-columns(3);
   @include omega();
   @include media($tablet) {
@@ -298,13 +300,37 @@ img.lazy{
   .title{
   @include span-columns(12);
   text-indent: .05em;
+  @include type(3);
   }
 
   .description{
     padding-bottom: 1em;
   }
   background-color: #fff;
-  padding: 3em 0;
+  padding: 2.5em 0 4em;
+
+  .intro-pics{
+    padding-top: 2em;
+  }
+
+  .intro-pics img{
+    width: 20%;
+    display: inline-block;
+    box-shadow: none;
+    padding-bottom: 0;
+    margin-bottom: -.35em;
+    margin-top: 0;
+    padding-top: 0;
+    // opacity: .8;
+    // transition: .25s;
+    // &:hover{
+    //   opacity: 1;
+    // }
+    @include media ($mobile) {
+      width: 50%;
+    }
+  }
+
 }
 
 //////////////////////////////////////////
@@ -368,6 +394,14 @@ img.lazy{
     video{
       height: 100%;
     }
+    .bsmfg-vid{
+    @include media($tablet) {
+    @include shift(1);
+    }
+    @include media($mobile) {
+      @include shift(0);
+    }
+  }
 }
 
 //////////////////////////////////////////
@@ -377,7 +411,7 @@ img.lazy{
 .spur{
   @include section-bg("../img/spur-bg.png",#499797,0);
   z-index: 999;
-  @include right-wrapper;
+  @include float-right-wrapper;
   p, h1, span, .project-info{
     color:#fff;
   }
@@ -386,6 +420,14 @@ img.lazy{
   }
   span{
     border-color: #fff;
+  }
+  .img-trans{
+     @include media($tablet) {
+    @include shift(1);
+    }
+    @include media($mobile) {
+      @include shift(0);
+  }
   }
 }
 
@@ -400,8 +442,10 @@ img.lazy{
   @include left-wrapper;
   z-index: 999;
   .img-trans{
+    padding-top: 1.25em;
     @include media($tablet) {
       @include shift(1);
+      padding-top: 0;
     }
     @include media($mobile) {
       @include shift(0);
@@ -430,6 +474,34 @@ img.lazy{
 
 .personal{
   @include section-bg("../img/personal-projects-bg.png",desaturate(#13323a,30%),0);
+  @include float-right-wrapper;
+  z-index: 999;
+  .right-content-wrapper{
+    padding-top: .6em;
+    padding-bottom: 2rem;
+    h1, h2, p{
+      color: #fff;
+    }
+  }
+  .img-trans{
+    @include media($tablet) {
+      @include shift(1);
+    }
+    @include media($mobile) {
+      @include shift(0);
+    }
+  }
+    span{
+    color: #fff;
+    border-color: #fff;
+    }
+    video{
+      height: 80%;
+    }
+}
+
+.personal2{
+  @include section-bg("../img/personal-projects-bg2.png",desaturate(#333,30%),0);
   @include left-wrapper;
   z-index: 999;
   .left-content-wrapper{
@@ -457,15 +529,18 @@ img.lazy{
 
 
 .outro{
-  color: #fff;
-  @include background-image(url('../img/footer-bg.svg'));
+  color: $light-black;
+  @include background-image(url('../img/bottom-bg.svg'));
   // height: 45em;
-  background-size: cover;
-  background-position: center center;
+  background-size: contain;
+  background-position: bottom center;
   background-repeat: no-repeat;
   z-index: 1;
-  padding-top: 2em;
+  padding-top: 2.25em;
   width: 100%;
+  .description:nth-child(5){
+    padding-bottom: 5em;
+  }
   a{
     background-color: teal;
     padding: 0 .2em;
