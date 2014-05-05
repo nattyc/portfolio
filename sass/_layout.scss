@@ -542,11 +542,11 @@ img.lazy{
     padding-bottom: 5em;
   }
   a{
-    background-color: teal;
+    background-color: lighten(teal,10%);
     padding: 0 .2em;
     transition: .25s;
     &:hover{
-      background-color: darken(teal,5%);
+      background-color: teal;
       color: #fff;
     }
   }
