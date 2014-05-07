@@ -307,10 +307,11 @@ img.lazy{
     padding-bottom: 1em;
   }
   background-color: #fff;
-  padding: 2.5em 0 4em;
+  padding: 2.5em 0 3em;
 
   .intro-pics{
-    padding-top: 2em;
+    margin-top: 2em;
+    box-shadow: 0 3px 10px rgba(0,0,0,.3);
   }
 
   .intro-pics img{
@@ -323,9 +324,10 @@ img.lazy{
     padding-top: 0;
     // opacity: .8;
     // transition: .25s;
-    // &:hover{
-    //   opacity: 1;
-    // }
+    @include transition (all .25s ease-in-out);
+    &:hover{
+      // @include transform(scale(1.1,1.1));
+    }
     @include media ($mobile) {
       width: 50%;
     }
@@ -420,6 +422,14 @@ img.lazy{
   }
   span{
     border-color: #fff;
+  }
+  .spur-vid{
+    @include media($tablet) {
+    @include shift(1);
+    }
+    @include media($mobile) {
+      @include shift(0);
+    }
   }
   .img-trans{
      @include media($tablet) {

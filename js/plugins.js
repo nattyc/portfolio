@@ -7,7 +7,7 @@ jQuery(function($) {
                     //enabling stickUp on the '.navbar-wrapper' class
                     $('.navbar-wrapper').stickUp({
                       //enabling marginTop with the 'auto' setting
-                      marginTop: 'auto'
+                      // marginTop: 'auto'
                     });
                 });
               });
