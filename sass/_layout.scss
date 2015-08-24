@@ -336,6 +336,44 @@ img.lazy{
 }
 
 //////////////////////////////////////////
+//SPRIG
+//////////////////////////////////////////
+
+.sprig{
+  @include section-bg("../img/xango-bg.png",#6ba539,0);
+  z-index: 999;
+
+
+  .xango-vid{
+    @include media($tablet) {
+    @include shift(3);
+    }
+    @include media($mobile) {
+      @include shift(0);
+    }
+  }
+
+  @include float-right-wrapper;
+  .right-content-wrapper{
+    padding-bottom: 2em;
+     @include media($tablet) {
+      padding-bottom: 2em;
+    }
+
+  }
+
+  h1,p,.project-info{
+    color: #fff;
+  }
+
+  span{
+    color: #fff;
+    border-color: #fff;
+  }
+
+}
+
+//////////////////////////////////////////
 //XANGO
 //////////////////////////////////////////
 
