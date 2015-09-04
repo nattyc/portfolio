@@ -343,7 +343,10 @@ img.lazy{
 .sprig{
   @include section-bg("../img/sprig-bg.png",#E5E5E5,0);
   z-index: 999;
-
+  
+  .sprig-top{
+    float:right;
+  }
 
   
 

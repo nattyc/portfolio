@@ -1507,6 +1507,10 @@ img.lazy {
   z-index: 999;
 }
 
+.sprig .sprig-top {
+  float: right;
+}
+
 .sprig .right-content-wrapper {
   padding-top: .25rem;
   float: left;
